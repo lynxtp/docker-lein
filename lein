@@ -1,0 +1,7 @@
+#!/bin/sh -e
+# -*- coding: utf-8; mode: sh -*-
+HERE=$(dirname $0)
+SERVICE=lein
+CMD=$(basename $0)
+docker-compose -f $HERE/$SERVICE.yml run --service-ports $SERVICE $CMD "$@"
+exit 0

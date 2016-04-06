@@ -1,0 +1,16 @@
+version: "2"
+services:
+  lein:
+    build:
+      context: .
+    image: lynxtp/lein:2.6.1
+    ports:
+      - "5309:5309"
+    volumes_from:
+      - lein-volume
+    volumes:
+      - $PWD:/mnt/workdir
+  lein-volume:
+    image: lynxtp/ubuntu:15.10
+    volumes:
+      - /srv/lein
