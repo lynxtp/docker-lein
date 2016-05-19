@@ -11,6 +11,6 @@ services:
     volumes:
       - $PWD:/mnt/workdir
   lein-volume:
-    image: lynxtp/ubuntu:15.10
+    image: lynxtp/ubuntu:16.04
     volumes:
       - /srv/lein
